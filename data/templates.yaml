@@ -1,0 +1,21 @@
+---
+catalyst_center:
+  templates:
+    projects:
+      - name: VirtualCat9k
+        # onboarding_templates:
+        #   - name: onboarding_template
+        #     description: Onboarding Template
+        #     language: JINJA
+        #     device_types:
+        #       - product_family: "Switches and Hubs"
+        #         product_series: "Cisco Catalyst 9000 Series Virtual Switches"
+        #     software_type: IOS-XE
+        dayn_templates:
+          - name: PIM-Underlay
+            description: PIM Underlay Template
+            language: JINJA
+            device_types:
+              - product_family: "Switches and Hubs"
+                product_series: "Cisco Catalyst 9000 Series Virtual Switches"
+            software_type: IOS-XE

@@ -1,0 +1,53 @@
+---
+catalyst_center:
+  fabric:
+    transits:
+      - name: BGP65002
+        type: IP_BASED_TRANSIT
+        routing_protocol_name: BGP
+        autonomous_system_number: 65002
+    fabric_sites:
+      - name: Global/Poland/Krakow
+        authentication_template_name: No Authentication
+        l3_virtual_networks:
+          - name: BYOD
+          - name: Guest
+          - name: Printers
+          - name: Campus
+        anycast_gateways:
+          - name: CampusVN-IPPool
+            auto_generate_vlan_name: true
+            vlan_id: 1022
+            traffic_type: DATA
+            layer2_flooding: true
+            l3_virtual_network: Campus
+          - name: GuestVN-IPPool
+            auto_generate_vlan_name: true
+            vlan_id: 1023
+            traffic_type: DATA
+            l3_virtual_network: Guest
+          - name: BYOD-IPPool
+            auto_generate_vlan_name: true
+            vlan_id: 1024
+            traffic_type: DATA
+            l3_virtual_network: BYOD
+          - name: PrintersVN-IPPool
+            auto_generate_vlan_name: true
+            vlan_id: 1025
+            traffic_type: DATA
+            l3_virtual_network: Printers
+    border_devices:
+      - name: BR10.cisco.eu
+        border_types:
+          - LAYER_3
+        default_exit: true
+        import_external_routes: false
+        local_autonomous_system_number: 65001
+        external_domain_routing_protocol_name: BGP
+        l3_handoffs:
+          - name: BGP65002
+            interface_name: GigabitEthernet1/0/3
+            virtual_networks:
+              - name: Campus
+                local_ip_address: 172.16.100.1/24
+                peer_ip_address: 172.16.100.2/24

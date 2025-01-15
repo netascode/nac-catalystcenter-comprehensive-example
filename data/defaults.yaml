@@ -1,0 +1,53 @@
+---
+defaults:
+  catalyst_center:
+    templates:
+      force_push_template: true
+      language: JINJA
+      composite: false
+      copying_config: true
+    pnp:
+      devices:
+         type: Default
+         protocol: SSH2
+         image_skip: true
+    inventory:
+      devices:
+        role_source: MANUAL
+    sites:
+      areas:
+        parent_name: Global
+      buildings:
+        parent_name: Global
+        country: Poland
+      floors:
+        parent_name: Global
+        height: 3
+        length: 30
+        rf_model: Cubes And Walled Offices
+        width: 30
+    network_settings:
+      ip_pools:
+        type: generic
+        ip_address_space: IPv4
+        ip_pools_reservations:
+          type: Generic
+          ipv4:
+            prefix: true
+          ipv6:
+            address_space: false
+    fabric:
+      transits:
+        type: IP_BASED
+        routing_protocol_name: BGP
+      fabric_sites:
+        authentication_template_name: No Authentication
+        pub_sub_enabled: false
+        anycast_gateways:
+          layer2_flooding: false
+          multiple_ip_to_mac_addresses: false
+          wireless_pool: false
+          traffic_type: DATA
+          ip_directed_broadcast: false
+          intra_subnet_routing_enabled: false
+          critical_pool: false

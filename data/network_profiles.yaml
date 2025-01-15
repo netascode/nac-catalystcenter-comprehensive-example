@@ -3,9 +3,7 @@ catalyst_center:
   network_profiles:
     switching:
       - name: VirtualCat9k
-        # onboarding_templates:
-        #   - onboarding_template
         dayn_templates: 
-          - PIM-Underlay
+          - ACL_Block
         sites:
           - Global/Poland/Krakow

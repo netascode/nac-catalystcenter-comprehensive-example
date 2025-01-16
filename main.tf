@@ -10,7 +10,7 @@ provider "catalystcenter" {
   username    = "username"
   password    = "password"
   url         = "https://dnac.url"
-  max_timeout = 300
+  max_timeout = 600
 }
 
 module "catalyst_center" {

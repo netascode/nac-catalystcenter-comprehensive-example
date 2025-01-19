@@ -19,7 +19,6 @@ catalyst_center:
             auto_generate_vlan_name: true
             vlan_id: 1022
             traffic_type: DATA
-            layer2_flooding: true
             l3_virtual_network: Campus
           - name: GuestVN-IPPool
             auto_generate_vlan_name: true

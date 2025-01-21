@@ -3,7 +3,7 @@ catalyst_center:
   network_profiles:
     switching:
       - name: VirtualCat9k
-        dayn_templates: 
+        dayn_templates:
           - ACL_Block
         sites:
           - Global/Poland/Krakow

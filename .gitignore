@@ -4,7 +4,7 @@
 
 ### dotenv ###
 .env
-
+.schema.yaml
 ### Emacs ###
 # -*- mode: gitignore; -*-
 *~

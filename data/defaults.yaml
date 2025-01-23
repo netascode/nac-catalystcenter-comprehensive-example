@@ -17,6 +17,7 @@ defaults:
     sites:
       areas:
         parent_name: Global
+      floors:
         height: 3
         length: 30
         rf_model: Cubes And Walled Offices

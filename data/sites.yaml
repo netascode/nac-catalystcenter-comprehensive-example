@@ -17,6 +17,7 @@ catalyst_center:
       - name: Bld A
         latitude: 50.0623225
         longitude: 19.937975
+        country: Poland
         parent_name: Global/Poland/Krakow
     floors:
       - name: FLOOR_1

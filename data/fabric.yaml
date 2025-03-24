@@ -18,22 +18,18 @@ catalyst_center:
         anycast_gateways:
           - name: CampusVN-IPPool
             auto_generate_vlan_name: true
-            vlan_id: 1022
             traffic_type: DATA
             l3_virtual_network: Campus
           - name: GuestVN-IPPool
             auto_generate_vlan_name: true
-            vlan_id: 1023
             traffic_type: DATA
             l3_virtual_network: Guest
           - name: BYOD-IPPool
             auto_generate_vlan_name: true
-            vlan_id: 1024
             traffic_type: DATA
             l3_virtual_network: BYOD
           - name: PrintersVN-IPPool
             auto_generate_vlan_name: true
-            vlan_id: 1025
             traffic_type: DATA
             l3_virtual_network: Printers
     border_devices:

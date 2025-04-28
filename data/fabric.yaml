@@ -42,9 +42,10 @@ catalyst_center:
         external_domain_routing_protocol_name: BGP
         l3_handoffs:
           - name: BGP65002
-            interface_name: GigabitEthernet1/0/3
-            virtual_networks:
-              - name: Campus
-                local_ip_address: 172.16.100.1/24
-                peer_ip_address: 172.16.100.2/24
-                vlan: 100
+            interfaces:
+              - name: GigabitEthernet1/0/3
+                virtual_networks:
+                  - name: Campus
+                    local_ip_address: 172.16.100.1/24
+                    peer_ip_address: 172.16.100.2/24
+                    vlan: 100

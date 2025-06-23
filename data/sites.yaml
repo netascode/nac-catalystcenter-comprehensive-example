@@ -2,6 +2,7 @@
 catalyst_center:
   sites:
     areas:
+      - name: Global
       - name: Poland
         parent_name: Global
       - name: Krakow

@@ -8,7 +8,8 @@ catalyst_center:
         autonomous_system_number: 65002
     fabric_sites:
       - name: Global/Poland/Krakow
-        authentication_template_name: No Authentication
+        authentication_template:
+          name: No Authentication
         pub_sub_enabled: true
         l3_virtual_networks:
           - name: BYOD

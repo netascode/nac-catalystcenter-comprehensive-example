@@ -40,7 +40,6 @@ catalyst_center:
         default_exit: true
         import_external_routes: false
         local_autonomous_system_number: 65001
-        external_domain_routing_protocol_name: BGP
         l3_handoffs:
           - name: BGP65002
             interfaces:

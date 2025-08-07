@@ -1,6 +1,11 @@
 ---
 catalyst_center:
   fabric:
+    l3_virtual_networks:
+      - name: BYOD
+      - name: Guest
+      - name: Printers
+      - name: Campus
     transits:
       - name: BGP65002
         type: IP_BASED_TRANSIT
@@ -12,10 +17,10 @@ catalyst_center:
           name: No Authentication
         pub_sub_enabled: true
         l3_virtual_networks:
-          - name: BYOD
-          - name: Guest
-          - name: Printers
-          - name: Campus
+          - BYOD
+          - Guest
+          - Printers
+          - Campus
         anycast_gateways:
           - name: CampusVN-IPPool
             auto_generate_vlan_name: true

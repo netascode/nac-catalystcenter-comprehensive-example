@@ -22,24 +22,24 @@ catalyst_center:
           - Printers
           - Campus
         anycast_gateways:
-          - name: CampusVN-IPPool
+          - ip_pool_name: CampusVN-IPPool
             auto_generate_vlan_name: true
             traffic_type: DATA
             l3_virtual_network: Campus
-          - name: GuestVN-IPPool
+          - ip_pool_name: GuestVN-IPPool
             auto_generate_vlan_name: true
             traffic_type: DATA
             l3_virtual_network: Guest
-          - name: BYOD-IPPool
+          - ip_pool_name: BYOD-IPPool
             auto_generate_vlan_name: true
             traffic_type: DATA
             l3_virtual_network: BYOD
-          - name: PrintersVN-IPPool
+          - ip_pool_name: PrintersVN-IPPool
             auto_generate_vlan_name: true
             traffic_type: DATA
             l3_virtual_network: Printers
     border_devices:
-      - name: BR10.cisco.eu
+      - name: BR10
         border_types:
           - LAYER_3
         default_exit: true

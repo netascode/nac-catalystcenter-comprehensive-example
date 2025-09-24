@@ -2,7 +2,7 @@ terraform {
   required_providers {
     catalystcenter = {
       source  = "CiscoDevNet/catalystcenter"
-      version = "0.3.0"
+      version = "0.3.3"
     }
   }
 }
@@ -16,7 +16,7 @@ provider "catalystcenter" {
 
 module "catalyst_center" {
   source  = "netascode/nac-catalystcenter/catalystcenter"
-  version = "0.1.1"
+  version = "0.2.0"
 
   yaml_directories      = ["data/"]
   templates_directories = ["data/templates/"]

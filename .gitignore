@@ -422,3 +422,5 @@ key
 
 # Pabot
 .pabotsuitenames
+
+tests/results/
